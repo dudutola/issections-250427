@@ -8,3 +8,32 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+@import "./pages/section_index.css";
+
+/* Components */
+@import "./components/section_card.css";
+@import "./components/new_form.css";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #80808042;
+  background-color: #263926;
+  line-height: 1.6;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 48px;
+  margin-bottom: 100px;
+  padding: 0 20px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
