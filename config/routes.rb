@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "sections#index"
 
-  resources :sections, only: [ :show, :new, :create ]
+  resources :sections, only: [ :show, :new, :create ] do
+    resources :issues, only: [ :new, :create ]
+  end
 end

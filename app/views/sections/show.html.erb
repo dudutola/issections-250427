@@ -1,7 +1,7 @@
 <h1><%= @section.name %></h1>
 
 <div class="btn_options">
-  <%= link_to raw('<i class="fa-solid fa-plus"></i> Add issue'), new_section_path, class: "btn add_new" %>
+  <%= link_to raw('<i class="fa-solid fa-plus"></i> Add issue'), new_section_issue_path(@section), class: "btn add_new" %>
   <%= link_to raw('<i class="fa-solid fa-plus"></i> Add steps'), new_section_path, class: "btn add_new" %>
 </div>
 

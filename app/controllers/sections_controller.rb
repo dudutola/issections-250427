@@ -15,7 +15,7 @@ class SectionsController < ApplicationController
     @section = Section.new(section_params)
 
     if @section.save
-      redirect_to root_path, notice: "Section created successfully!"
+      redirect_to @section, notice: "Section created successfully!"
     else
       render :new, status: :unprocessable_entity
     end
