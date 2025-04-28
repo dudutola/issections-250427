@@ -9,7 +9,7 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-@import "./pages/section_index.css";
+@import "./pages/section.css";
 
 /* Components */
 @import "./components/section_card.css";

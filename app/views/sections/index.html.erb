@@ -6,8 +6,10 @@
 
 <div class="sections">
   <% @sections.each do |section| %>
-    <div class="section_card">
-      <h2><%= section.name %></h2>
-    </div>
+    <%= link_to section_path(section) do %>
+      <div class="section_card">
+        <h2><%= section.name %></h2>
+      </div>
+    <% end %>
   <% end %>
 </div>

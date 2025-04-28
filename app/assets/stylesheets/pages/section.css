@@ -16,3 +16,15 @@
   color: black;
   font-weight: bold;
 }
+
+/* show */
+.btn_options {
+  display: flex;
+  gap: 20px;
+
+  .add_new {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
