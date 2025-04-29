@@ -35,8 +35,8 @@
   </div>
 
   <div class="keywords">
-    <%= f.label :keywords %>
-    <%= f.text_field :keywords, value: issue.keywords.map(&:word).join(", "), placeholder: "terminal, database error, rails db:migrate" %>
+    <%= f.label :keyword_list, "Keywords (comma separated)" %>
+    <%= f.text_field :keyword_list, placeholder: "terminal, database error, rails db:migrate" %>
   </div>
 
   <div>
