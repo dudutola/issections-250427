@@ -3,6 +3,10 @@
     font-size: 26px;
   }
 
+  h1, h2 {
+    color: #ccc;
+  }
+
   .section_name {
     text-align: end;
   }

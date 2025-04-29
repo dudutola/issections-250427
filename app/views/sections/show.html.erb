@@ -15,16 +15,7 @@
 <br>
 <%= link_to "> Back to all Sections", root_path %>
 
-<%= form_with url: section_path(@section), method: :get do %>
-  <div>
-    <%= label_tag :keyword, "Search issues by keyword" %>
-    <%= text_field_tag :keyword, params[:keyword], placeholder: "rails..." %>
-  </div>
-
-  <div>
-    <%= submit_tag "Search" %>
-  </div>
-<% end %>
+<%= render "search_bar", section: @section %>
 
 <br>
 <div class="section_container">
