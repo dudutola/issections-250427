@@ -1,5 +1,6 @@
 class Keyword < ApplicationRecord
-  belongs_to :issue
+  has_many :issue_keywords, dependent: :destroy
+  has_many :issues, through: :issue_keywords
 
   validates :word, presence: true
 end
