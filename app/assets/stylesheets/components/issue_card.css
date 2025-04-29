@@ -24,11 +24,12 @@
   }
 
   .badge {
-    padding: 4px;
+    padding: 4px 5px;
     background-color: red;
     position: absolute;
     height: 12%;
     right: 12px;
     top: 0px;
+    border-bottom-left-radius: 6px;
   }
 }
