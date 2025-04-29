@@ -6,4 +6,22 @@
 </div>
 
 <br>
-<%= link_to "> Back", root_path %>
+<%= link_to "> Back to all Sections", root_path %>
+
+<br>
+<div class="section_container">
+  <h2>Issues in this section:</h2>
+  <div class="issues_list">
+    <% @issues.each do |issue| %>
+      <%= link_to section_issue_path(@section, issue) do %>
+        <div class="issue_card">
+          <% if issue.solved == false %>
+            <span class="badge"></span>
+          <% end %>
+          <h3><%= issue.title %></h3>
+          <p><%= issue.problem %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.issue_container {
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .problem_description,
+  .solution_description {
+    margin-left: 12px;
+
+    p {
+      margin-top: 0;
+    }
+  }
+}

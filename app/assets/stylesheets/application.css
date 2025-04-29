@@ -15,6 +15,7 @@
 @import "./components/section_card.css";
 @import "./components/new_form.css";
 @import "./components/issue_form.css";
+@import "./components/issue_card.css";
 
 
 body {
