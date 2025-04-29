@@ -31,5 +31,10 @@
     <% end %>
   </div>
 
+  <div class="issue_actions">
+    <%= link_to raw('<i class="fa-solid fa-pen-to-square"></i>'), edit_section_issue_path(@issue), class: "btn" %>
+
+  </div>
+
   <%= link_to ">Back", section_path(@section) %>
 </div>

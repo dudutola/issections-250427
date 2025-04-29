@@ -1,8 +1,7 @@
 class IssuesController < ApplicationController
-  def show
-    @section = Section.find(params[:section_id])
-    @issue = @section.issues.find(params[:id])
-  end
+  before_action :set_issue, only: [ :show, :edit, :update ]
+
+  def show; end
 
   def new
     @section = Section.find(params[:section_id])
@@ -20,7 +19,22 @@ class IssuesController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @issue.update(issue_params)
+      redirect_to section_issue_path(@section, @issue)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
+
+  def set_issue
+    @section = Section.find(params[:section_id])
+    @issue = @section.issues.find(params[:id])
+  end
 
   def issue_params
     params.require(:issue).permit(:title, :problem, :solution, :image, :solved, :section_id)
