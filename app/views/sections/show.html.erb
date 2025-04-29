@@ -3,6 +3,7 @@
 
   <div class="section_actions">
     <%= link_to raw('<i class="fa-solid fa-pen-to-square"></i>'), edit_section_path(@section), class: "btn edit_btn" %>
+    <%= link_to raw('<i class="fa-solid fa-trash"></i>'), section_path(@section), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn delete_btn" %>
   </div>
 </div>
 
@@ -17,17 +18,21 @@
 <br>
 <div class="section_container">
   <h2>Issues in this section:</h2>
-  <div class="issues_list">
-    <% @issues.each do |issue| %>
-      <%= link_to section_issue_path(@section, issue) do %>
-        <div class="issue_card">
-          <% if issue.solved == false %>
-            <span class="badge"></span>
-          <% end %>
-          <h3><%= issue.title %></h3>
-          <p><%= issue.problem %></p>
-        </div>
+  <% if @section.issues.empty? %>
+    <p>No issues yet. Add one!</p>
+  <% else %>
+    <div class="issues_list">
+      <% @issues.each do |issue| %>
+        <%= link_to section_issue_path(@section, issue) do %>
+          <div class="issue_card">
+            <% if issue.solved == false %>
+              <span class="badge"></span>
+            <% end %>
+            <h3><%= issue.title %></h3>
+            <p><%= issue.problem %></p>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
