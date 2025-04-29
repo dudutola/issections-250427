@@ -1,3 +1,13 @@
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .section_actions .btn {
+    font-size: 22px;
+  }
+}
+
 .add_new {
   width: 100%;
   border: 1px solid white;

@@ -1,4 +1,10 @@
-<h1><%= @section.name %></h1>
+<div class="section_header">
+  <h1><%= @section.name %></h1>
+
+  <div class="section_actions">
+    <%= link_to raw('<i class="fa-solid fa-pen-to-square"></i>'), edit_section_path(@section), class: "btn edit_btn" %>
+  </div>
+</div>
 
 <div class="btn_options">
   <%= link_to raw('<i class="fa-solid fa-plus"></i> Add issue'), new_section_issue_path(@section), class: "btn add_new" %>

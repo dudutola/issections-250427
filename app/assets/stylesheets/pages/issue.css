@@ -26,7 +26,8 @@
   }
 }
 
-.issue_actions {
+.issue_actions,
+.section_actions {
   display: flex;
   justify-content: end;
   align-items: center;

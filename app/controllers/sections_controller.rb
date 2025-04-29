@@ -1,12 +1,11 @@
 class SectionsController < ApplicationController
+  before_action :set_section, only: [ :show, :edit, :update ]
+
   def index
     @sections = Section.all
   end
 
-  def show
-    @section = Section.find(params[:id])
-    @issues = @section.issues
-  end
+  def show; end
 
   def new
     @section = Section.new
@@ -22,7 +21,22 @@ class SectionsController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @section.update(section_params)
+      redirect_to @section, notice: "Section was successfully updated!"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
+
+  def set_section
+    @section = Section.find(params[:id])
+    @issues = @section.issues
+  end
 
   def section_params
     params.require(:section).permit(:name)
