@@ -1,6 +1,10 @@
 class StepsController < ApplicationController
   def index
-    @steps = Step.all
     @sections = Section.includes(:steps)
+  end
+
+  def show
+    @section = Section.find(params[:section_id])
+    @step = @section.steps.find(params[:id])
   end
 end

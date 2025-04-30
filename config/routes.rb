@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :sections, only: [ :show, :new, :create, :edit, :update, :destroy ] do
     resources :issues, only: [ :show, :new, :create, :edit, :update, :destroy ]
-    resources :steps, only: [ :index ]
+    resources :steps, only: [ :index, :show ]
   end
 
   resources :steps, only: [ :index ]

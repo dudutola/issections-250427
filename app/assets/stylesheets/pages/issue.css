@@ -1,18 +1,5 @@
 .issue_container {
-  h1 {
-    font-size: 26px;
-  }
-
-  h1, h2 {
-    color: #ccc;
-  }
-
-  .section_name {
-    text-align: end;
-  }
-
   h2 {
-    font-size: 20px;
     margin-bottom: 0;
   }
 

@@ -1,5 +1,5 @@
 <div class="issue_container">
-  <h1><%= @issue.title %></h1>
+  <h1 class="default_h1"><%= @issue.title %></h1>
 
   <hr>
 
@@ -14,7 +14,7 @@
   <% end %>
 
   <div class="problem_description">
-    <h2>Problem:</h2>
+    <h2 class="default_h2">Problem:</h2>
     <% if @issue.problem.present? %>
       <p><%= @issue.problem %></p>
     <% else %>
@@ -23,7 +23,7 @@
   </div>
 
   <div class="solution_description">
-    <h2>Solution:</h2>
+    <h2 class="default_h2">Solution:</h2>
     <% if @issue.solution.present? %>
       <p><%= @issue.solution %></p>
     <% else %>
