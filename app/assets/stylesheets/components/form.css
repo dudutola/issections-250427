@@ -43,6 +43,16 @@ form input[type="file"] {
     margin-bottom: 2px;
   }
 }
+.image_preview {
+  p, .preview {
+    margin: 4px 4px 4px 8px;
+  }
+
+  .preview {
+    width: 30%;
+  }
+}
+
 form input[type="submit"] {
   background-color: #7c9a4f;
   color: white;
