@@ -27,7 +27,7 @@ body {
   background-color: #80808042;
   background-color: #263926;
   line-height: 1.6;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
