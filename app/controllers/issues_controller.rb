@@ -20,7 +20,9 @@ class IssuesController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @issue.keyword_list = @issue.keywords.pluck(:word).join(",")
+  end
 
   def update
     if @issue.update(issue_params)
