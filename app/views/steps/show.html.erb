@@ -17,7 +17,7 @@
   <div class="content">
     <h2 class="default_h2">Content:</h2>
     <% if @step.content.present? %>
-      <p><%= @step.content %></p>
+      <p><%= markdown(@step.content) %></p>
     <% else %>
       <p>No content provided yet.</p>
     <% end %>
