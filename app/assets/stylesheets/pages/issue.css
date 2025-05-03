@@ -1,3 +1,13 @@
+.step_container {
+  .step_actions {
+    justify-content: start !important;
+  }
+
+  .default_h1 {
+    margin-bottom: 4px;
+  }
+}
+
 .issue_container {
   h2 {
     margin-bottom: 0;
