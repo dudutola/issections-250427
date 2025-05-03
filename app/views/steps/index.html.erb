@@ -3,15 +3,17 @@
 <div class="steps_sections">
   <% @sections.each do |section| %>
     <% if section.steps.any? %>
-      <h2>Steps in <%= section.name %>...</h2>
-      <div class="steps">
-        <% section.steps.each do |step| %>
-          <%= link_to  section_step_path(section, step) do %>
-            <div class="steps_card section_card">
-              <h3><%= step.title %></h3>
-            </div>
+      <h2>Steps in <%= link_to section.name, section_path(section) %>...</h2>
+      <div class="steps_scroll">
+        <div class="steps">
+          <% section.steps.each do |step| %>
+            <%= link_to section_step_path(section, step), class: "step_card" do %>
+              <div class="steps_card section_card">
+                <h3><%= step.title %></h3>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     <% end %>
   <% end %>
