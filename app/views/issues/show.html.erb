@@ -36,5 +36,5 @@
     <%= link_to raw('<i class="fa-solid fa-trash"></i>'), section_issue_path(@section, @issue), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn delete_btn" %>
   </div>
 
-  <%= link_to ">Back", section_path(@section) %>
+  <%= link_to ">Back", section_path(@section), class: "back" %>
 </div>
