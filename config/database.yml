@@ -82,3 +82,9 @@ production:
   database: issections_250427_production
   username: issections_250427
   password: <%= ENV["ISSECTIONS_250427_DATABASE_PASSWORD"] %>
+
+cable:
+  <<: *default
+  database: issections_250427_production
+  username: issections_250427
+  password: <%= ENV["ISSECTIONS_250427_DATABASE_PASSWORD"] %>
