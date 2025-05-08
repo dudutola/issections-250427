@@ -19,6 +19,7 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
+
 development:
   <<: *default
   database: issections_250427_development
@@ -42,7 +43,7 @@ development:
   #port: 5432
 
   # Schema search path. The server defaults to $user,public
-  #schema_search_path: myapp,sharedapp,public
+  #schema_search_path: issections_250427,sharedapp,public
 
   # Minimum log levels, in increasing order:
   #   debug5, debug4, debug3, debug2, debug1,
@@ -78,7 +79,20 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: issections_250427_production
-  username: issections_250427
-  password: <%= ENV["ISSECTIONS_250427_DATABASE_PASSWORD"] %>
+  primary: &primary_production
+    <<: *default
+    database: issections_250427_production
+    username: issections_250427
+    password: <%= ENV["ISSECTIONS_250427_DATABASE_PASSWORD"] %>
+  cache:
+    <<: *primary_production
+    database: issections_250427_production_cache
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *primary_production
+    database: issections_250427_production_queue
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    database: issections_250427_production_cable
+    migrations_paths: db/cable_migrate
