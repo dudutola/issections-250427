@@ -1,4 +1,4 @@
-class CreateKeywords < ActiveRecord::Migration[8.0]
+class CreateKeywords < ActiveRecord::Migration[7.0]
   def change
     create_table :keywords do |t|
       t.text :word
