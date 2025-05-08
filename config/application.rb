@@ -1,6 +1,6 @@
 require_relative "boot"
 
-require "active_records/railtie"
+require "active_record/railtie"
 
 require "rails/all"
 
